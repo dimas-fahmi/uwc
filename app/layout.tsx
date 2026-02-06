@@ -1,5 +1,6 @@
 import "@/src/ui/css/globals.css";
 import { NextIntlClientProvider } from "next-intl";
+import { poppinsFont } from "@/src/ui/fonts";
 
 export default function RootLayout({
   children,
@@ -8,7 +9,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`antialiased`}>
+      <body className={`${poppinsFont.variable} antialiased`}>
         <NextIntlClientProvider>{children}</NextIntlClientProvider>
       </body>
     </html>

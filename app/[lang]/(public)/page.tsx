@@ -1,9 +1,8 @@
-"use client";
+import { getTranslations } from "next-intl/server";
 
-import { useTranslations } from "next-intl";
+const Homepage = async () => {
+  const t = await getTranslations();
 
-const Homepage = () => {
-  const t = useTranslations();
   return <div>{t("HomePage.title")}</div>;
 };
 
