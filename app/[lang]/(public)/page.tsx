@@ -1,9 +1,14 @@
-import { getTranslations } from "next-intl/server";
+import HeroSection from "./sections/HeroSection";
+import Services from "./sections/Services";
 
 const Homepage = async () => {
-  const t = await getTranslations();
+  return (
+    <div className="min-h-[10000px]">
+      <HeroSection />
 
-  return <div>{t("HomePage.title")}</div>;
+      <Services />
+    </div>
+  );
 };
 
 export default Homepage;

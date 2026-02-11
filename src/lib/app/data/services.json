@@ -1,0 +1,127 @@
+{
+  "services": [
+    {
+      "name": "Vaccination",
+      "description": "At Unified Whiteglove Clinic, we prioritize vaccinations to protect our community, offering a comprehensive range of vaccines to ensure public health.",
+      "label": ["COVID-19", "Hepatitis A-E"],
+      "image": "https://images.pexels.com/photos/3993211/pexels-photo-3993211.jpeg"
+    },
+    {
+      "name": "Dentist",
+      "description": "Get a sparkling smile with our advanced dental services, including cleanings, filling, whitening, and personalized care for your oral health.",
+      "label": ["Treatment", "Replacement"],
+      "image": "https://images.pexels.com/photos/6627413/pexels-photo-6627413.jpeg?_gl=1*x5sba*_ga*NTU1MDU1MTg5LjE3NzAzODI2OTk.*_ga_8JE65Q40S6*czE3NzAzODI2OTgkbzEkZzEkdDE3NzAzODI4MDckajM4JGwwJGgw"
+    },
+    {
+      "name": "General Checkup",
+      "description": "Comprehensive health evaluations including physical exams, vital checks, and preventive screenings to maintain overall wellness.",
+      "label": ["Physical Exam", "Preventive Care"],
+      "image": "https://images.pexels.com/photos/7579823/pexels-photo-7579823.jpeg"
+    },
+    {
+      "name": "Pediatrics",
+      "description": "Specialized medical care for infants, children, and adolescents, focusing on growth, development, and childhood illnesses.",
+      "label": ["Child Health", "Immunizations"],
+      "image": "https://images.pexels.com/photos/5998449/pexels-photo-5998449.jpeg"
+    },
+    {
+      "name": "Cardiology",
+      "description": "Advanced heart care services including diagnostics, monitoring, and treatment plans for cardiovascular conditions.",
+      "label": ["ECG", "Heart Screening"],
+      "image": "https://images.pexels.com/photos/8460226/pexels-photo-8460226.jpeg"
+    },
+    {
+      "name": "Dermatology",
+      "description": "Professional skin care treatments addressing acne, eczema, skin infections, and cosmetic skin procedures.",
+      "label": ["Skin Treatment", "Cosmetic Care"],
+      "image": "https://images.pexels.com/photos/7446680/pexels-photo-7446680.jpeg"
+    },
+    {
+      "name": "Laboratory Services",
+      "description": "Accurate and timely diagnostic testing services including blood tests, urine analysis, and pathology screenings.",
+      "label": ["Blood Test", "Diagnostics"],
+      "image": "https://images.pexels.com/photos/3735782/pexels-photo-3735782.jpeg"
+    },
+    {
+      "name": "Physiotherapy",
+      "description": "Rehabilitation services designed to restore movement and function after injury, surgery, or chronic conditions.",
+      "label": ["Rehabilitation", "Pain Management"],
+      "image": "https://images.pexels.com/photos/6111580/pexels-photo-6111580.jpeg"
+    },
+    {
+      "name": "Mental Health",
+      "description": "Confidential counseling and psychiatric services to support emotional well-being and mental health conditions.",
+      "label": ["Counseling", "Therapy"],
+      "image": "https://images.pexels.com/photos/4100661/pexels-photo-4100661.jpeg"
+    },
+    {
+      "name": "Emergency Care",
+      "description": "Immediate medical attention for urgent and life-threatening conditions with professional emergency response support.",
+      "label": ["Urgent Care", "24/7 Service"],
+      "image": "https://images.pexels.com/photos/8941908/pexels-photo-8941908.jpeg"
+    }
+  ],
+
+  "pelayanan": [
+    {
+      "name": "Vaksinasi",
+      "description": "Di Unified Whiteglove Clinic, kami memprioritaskan vaksinasi untuk melindungi komunitas kami, dengan menyediakan berbagai jenis vaksin secara lengkap guna menjaga kesehatan masyarakat.",
+      "label": ["COVID-19", "Hepatitis A-E"],
+      "image": "https://images.pexels.com/photos/3993211/pexels-photo-3993211.jpeg"
+    },
+    {
+      "name": "Dokter Gigi",
+      "description": "Dapatkan senyum yang cerah dengan layanan perawatan gigi modern kami, termasuk pembersihan, penambalan, pemutihan, dan perawatan personal untuk kesehatan mulut Anda.",
+      "label": ["Perawatan", "Penggantian"],
+      "image": "https://images.pexels.com/photos/3993211/pexels-photo-3993211.jpeg"
+    },
+    {
+      "name": "Pemeriksaan Umum",
+      "description": "Evaluasi kesehatan menyeluruh termasuk pemeriksaan fisik, pengecekan tanda vital, dan skrining pencegahan untuk menjaga kesehatan secara keseluruhan.",
+      "label": ["Pemeriksaan Fisik", "Perawatan Pencegahan"],
+      "image": "https://images.pexels.com/photos/3993211/pexels-photo-3993211.jpeg"
+    },
+    {
+      "name": "Pediatri",
+      "description": "Layanan medis khusus untuk bayi, anak-anak, dan remaja dengan fokus pada pertumbuhan, perkembangan, dan penyakit anak.",
+      "label": ["Kesehatan Anak", "Imunisasi"],
+      "image": "https://images.pexels.com/photos/3993211/pexels-photo-3993211.jpeg"
+    },
+    {
+      "name": "Kardiologi",
+      "description": "Layanan perawatan jantung tingkat lanjut termasuk diagnostik, pemantauan, dan rencana perawatan untuk kondisi kardiovaskular.",
+      "label": ["EKG", "Skrining Jantung"],
+      "image": "https://images.pexels.com/photos/3993211/pexels-photo-3993211.jpeg"
+    },
+    {
+      "name": "Dermatologi",
+      "description": "Perawatan kulit profesional untuk mengatasi jerawat, eksim, infeksi kulit, serta prosedur perawatan kulit kosmetik.",
+      "label": ["Perawatan Kulit", "Perawatan Kosmetik"],
+      "image": "https://images.pexels.com/photos/3993211/pexels-photo-3993211.jpeg"
+    },
+    {
+      "name": "Layanan Laboratorium",
+      "description": "Layanan pengujian diagnostik yang akurat dan tepat waktu termasuk tes darah, analisis urin, dan skrining patologi.",
+      "label": ["Tes Darah", "Diagnostik"],
+      "image": "https://images.pexels.com/photos/3993211/pexels-photo-3993211.jpeg"
+    },
+    {
+      "name": "Fisioterapi",
+      "description": "Layanan rehabilitasi yang dirancang untuk memulihkan gerakan dan fungsi setelah cedera, operasi, atau kondisi kronis.",
+      "label": ["Rehabilitasi", "Manajemen Nyeri"],
+      "image": "https://images.pexels.com/photos/3993211/pexels-photo-3993211.jpeg"
+    },
+    {
+      "name": "Kesehatan Mental",
+      "description": "Layanan konseling dan psikiatri yang bersifat rahasia untuk mendukung kesejahteraan emosional dan kondisi kesehatan mental.",
+      "label": ["Konseling", "Terapi"],
+      "image": "https://images.pexels.com/photos/3993211/pexels-photo-3993211.jpeg"
+    },
+    {
+      "name": "Layanan Darurat",
+      "description": "Penanganan medis segera untuk kondisi mendesak dan mengancam jiwa dengan dukungan respons darurat profesional.",
+      "label": ["Perawatan Mendesak", "Layanan 24/7"],
+      "image": "https://images.pexels.com/photos/3993211/pexels-photo-3993211.jpeg"
+    }
+  ]
+}

@@ -1,4 +1,5 @@
 import type React from "react";
+import PublicNavbar from "@/src/ui/components/ui/PublicNavbar";
 
 const PublicLayout = ({
   children,
@@ -8,7 +9,7 @@ const PublicLayout = ({
   return (
     <div>
       {/* Navbar */}
-      <nav>Navbar</nav>
+      <PublicNavbar />
 
       {/* Content */}
       <main>{children}</main>

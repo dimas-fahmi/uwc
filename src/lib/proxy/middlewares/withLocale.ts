@@ -31,10 +31,6 @@ export function withLocale(middleware: CustomMiddleware): CustomMiddleware {
 
     let locale = storedLocale || DEFAULT_LOCALE;
 
-    if (!storedLocale) {
-      response.cookies.set("locale", locale);
-    }
-
     if (setLocale && isSupportedLocale(setLocale)) {
       locale = setLocale;
       response.cookies.set("locale", setLocale);
