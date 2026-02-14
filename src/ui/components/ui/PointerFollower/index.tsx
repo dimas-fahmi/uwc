@@ -2,21 +2,24 @@
 
 import { motion, useMotionValue, useSpring, useTransform } from "framer-motion";
 import { useRef } from "react";
+import { cn } from "@/src/ui/shadcn/lib/utils";
 
 const PointerFollower = ({
   children,
   text,
+  className,
+  ...props
 }: {
   children: Readonly<React.ReactNode>;
   text?: string;
-}) => {
+} & React.ComponentProps<"div">) => {
   const containerRef = useRef<HTMLDivElement>(null);
 
   const mouseX = useMotionValue(-150);
   const mouseY = useMotionValue(-150);
 
-  const springX = useSpring(mouseX, { stiffness: 150, damping: 20 });
-  const springY = useSpring(mouseY, { stiffness: 150, damping: 20 });
+  const springX = useSpring(mouseX, { stiffness: 80, damping: 10 });
+  const springY = useSpring(mouseY, { stiffness: 80, damping: 10 });
 
   const ballSize = 80;
 
@@ -34,12 +37,12 @@ const PointerFollower = ({
   );
 
   // Target scale based on distance
-  const scaleTarget = useTransform(distance, [0, 40], [0.8, 1]);
+  const scaleTarget = useTransform(distance, [0, 1], [0.1, 1]);
 
   // Add spring to scale for smooth size animation
   const scale = useSpring(scaleTarget, {
-    stiffness: 80,
-    damping: 11,
+    stiffness: 50,
+    damping: 15,
   });
 
   const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
@@ -50,12 +53,17 @@ const PointerFollower = ({
   };
 
   return (
-    <div ref={containerRef} onMouseMove={handleMouseMove} className="relative">
+    <div
+      ref={containerRef}
+      onMouseMove={handleMouseMove}
+      {...props}
+      className={cn("relative", className)}
+    >
       <motion.div
         drag
         dragConstraints={containerRef}
         whileDrag={{ scale: 1.2 }}
-        className="pointer-events-none absolute z-40 flex items-center justify-center rounded-full bg-foreground text-background text-sm font-extralight"
+        className="pointer-events-none absolute z-40 flex items-center justify-center rounded-full bg-background text-foreground border shadow-2xl text-sm font-extralight"
         style={{
           width: ballSize,
           height: ballSize,

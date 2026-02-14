@@ -11,7 +11,7 @@ export interface ServiceType {
 
 export const ServiceCard = ({ service }: { service: ServiceType }) => {
   return (
-    <div className="relative min-w-[60vw] max-h-[280px] overflow-hidden rounded-2xl shadow-2xl select-none">
+    <div className="relative min-w-[70%] max-h-[280px] overflow-hidden rounded-2xl select-none">
       {/* Backdrop */}
       <div>
         <Image
@@ -28,12 +28,12 @@ export const ServiceCard = ({ service }: { service: ServiceType }) => {
         {/* Wrapper */}
         <div className="text-white space-y-2 flex-1">
           <h1 className="text-lg font-semibold">{service.name}</h1>
-          <p className="text-xs opacity-95 font-extralight">
+          <p className="text-xs opacity-95 font-extralight line-clamp-3">
             {service.description}
           </p>
         </div>
 
-        <div className="text-white space-y-2 flex-1 flex justify-end gap-3">
+        <div className="text-white absolute md:static top-5 right-5 space-y-2 flex-1 flex justify-end gap-3">
           {service.label.map((l) => (
             <div
               key={l}

@@ -9,7 +9,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${poppinsFont.variable} antialiased`}>
+      <body
+        className={`${poppinsFont.variable} antialiased max-w-[1440px] mx-auto`}
+      >
         <NextIntlClientProvider>{children}</NextIntlClientProvider>
       </body>
     </html>

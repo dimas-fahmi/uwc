@@ -1,0 +1,236 @@
+{
+  "doctors": [
+    {
+      "name": "dr. Nina Handayani, Sp.THT-KL",
+      "code": "8044715",
+      "country": "id",
+      "age": 39,
+      "specialty": "Otolaryngologist",
+      "biography": "Specializing in Ear, Nose, and Throat surgery, dr. Nina is the clinic's expert on upper respiratory health—a crucial role given Bandung's chilly, humid mornings. She trained extensively in Germany before joining the Unified Whiteglove team.\n\nShe is particularly sought after by professional vocalists and public speakers for her delicate approach to vocal cord health. Known for her energetic personality, dr. Nina often jokes that she \"hears what others miss.\" She is a passionate foodie and maintains a popular blog reviewing the hidden culinary gems found in the narrow gangways of old Bandung.",
+      "image": "dr-nina-handayani.jpg",
+      "schedule": [
+        { "day_number_in_week": 2, "from": "10:00", "to": "18:00" },
+        { "day_number_in_week": 4, "from": "10:00", "to": "18:00" },
+        { "day_number_in_week": 6, "from": "09:00", "to": "14:00" }
+      ]
+    },
+    {
+      "name": "dr. Indra Pratama, Sp.THT-KL",
+      "code": "8044921",
+      "country": "id",
+      "age": 45,
+      "specialty": "Otolaryngologist",
+      "biography": "Complementing the ENT department, dr. Indra brings a focus on restorative hearing surgery and sinus health. Having practiced in Melbourne for eight years, he specializes in minimally invasive endoscopic procedures. \n\nHe is known for his quiet, meticulous nature, which balances dr. Nina’s high energy. He believes that clear breathing is the foundation of peak performance. In his spare time, dr. Indra is a master of woodcraft, building custom furniture in his workshop in the North Bandung hills to sharpen his surgical precision.",
+      "image": "dr-indra-pratama-02.jpg",
+      "schedule": [
+        { "day_number_in_week": 1, "from": "09:00", "to": "17:00" },
+        { "day_number_in_week": 3, "from": "09:00", "to": "17:00" },
+        { "day_number_in_week": 5, "from": "09:00", "to": "17:00" }
+      ]
+    },
+    {
+      "name": "dr. Aris Setiawan",
+      "code": "1012948",
+      "country": "id",
+      "age": 42,
+      "specialty": "General Practitioner",
+      "biography": "A top graduate of Universitas Padjadjaran, dr. Aris is a cornerstone of the Unified Whiteglove Clinic in Bandung. After a decade of serving in international medical relief programs, he was recruited back to West Java to bring his world-class diagnostic skills to the clinic’s wellness wing.\n\nKnown for his impeccable bedside manner and sharp attention to detail, he manages the comprehensive \"Executive Health Screenings\" for the city's elite. While the clinic is ultra-modern, dr. Aris maintains a personal touch, often discussing the best local coffee roasts with his patients to put them at ease. He is a fixture of the Bandung cycling community, often seen riding up toward Lembang before his morning shift at the clinic.",
+      "image": "dr-aris-setiawan-02.jpg",
+      "schedule": [
+        { "day_number_in_week": 1, "from": "08:00", "to": "15:00" },
+        { "day_number_in_week": 2, "from": "08:00", "to": "15:00" },
+        { "day_number_in_week": 3, "from": "08:00", "to": "15:00" },
+        { "day_number_in_week": 4, "from": "08:00", "to": "15:00" },
+        { "day_number_in_week": 5, "from": "08:00", "to": "15:00" }
+      ]
+    },
+    {
+      "name": "dr. Maya Safira",
+      "code": "1012955",
+      "country": "id",
+      "age": 37,
+      "specialty": "General Practitioner",
+      "biography": "Dr. Maya provides the essential late-day coverage for the clinic’s busy professional clientele. With a background in emergency medicine and preventative health, she is an expert at identifying early warning signs of lifestyle-related illnesses.\n\nShe is highly regarded for her straightforward communication style and her ability to coordinate multi-specialist treatment plans. When she isn't at the clinic, Maya is an avid urban gardener, transforming her Ciumbuleuit balcony into a lush sanctuary for organic herbs and rare tropical plants.",
+      "image": "dr-maya-safira.jpg",
+      "schedule": [
+        { "day_number_in_week": 1, "from": "14:00", "to": "21:00" },
+        { "day_number_in_week": 2, "from": "14:00", "to": "21:00" },
+        { "day_number_in_week": 3, "from": "14:00", "to": "21:00" },
+        { "day_number_in_week": 4, "from": "14:00", "to": "21:00" },
+        { "day_number_in_week": 5, "from": "14:00", "to": "21:00" },
+        { "day_number_in_week": 6, "from": "09:00", "to": "15:00" }
+      ]
+    },
+    {
+      "name": "dr. Widya Kusuma, Sp.JP",
+      "code": "2055831",
+      "country": "id",
+      "age": 35,
+      "specialty": "Cardiologist",
+      "biography": "As the lead Heart Specialist at Unified Whiteglove, dr. Widya is famous for her \"precision-first\" philosophy. She joined the clinic after completing her fellowship in Tokyo, bringing advanced non-invasive cardiac imaging techniques to Bandung.\n\nShe is often described by patients as calm and analytical, capable of explaining complex heart conditions in a way that feels manageable. When she isn't monitoring the vitals of West Java's corporate leaders, she spends her time practicing traditional Sundanese dance, which she claims is the secret to her own cardiovascular health and focus.",
+      "image": "dr-widya-kusuma-02.jpg",
+      "schedule": [
+        { "day_number_in_week": 2, "from": "08:00", "to": "14:00" },
+        { "day_number_in_week": 4, "from": "08:00", "to": "14:00" },
+        { "day_number_in_week": 5, "from": "08:00", "to": "14:00" }
+      ]
+    },
+    {
+      "name": "dr. Lukman Hakim, Sp.JP",
+      "code": "2055842",
+      "country": "id",
+      "age": 51,
+      "specialty": "Cardiologist",
+      "biography": "With over twenty years of experience in interventional cardiology, dr. Lukman is the senior strategist for the heart health team. He specializes in heart failure management and sports cardiology for the city's growing population of high-altitude runners.\n\nHis clinical philosophy centers on 'longevity through movement.' He works closely with dr. Widya to ensure the clinic’s diagnostic equipment is the most advanced in Indonesia. A dedicated vinyl collector, he is often found browsing record shops in Jalan Braga for rare 70s Indonesian jazz.",
+      "image": "dr-lukman-hakim.jpg",
+      "schedule": [
+        { "day_number_in_week": 1, "from": "11:00", "to": "19:00" },
+        { "day_number_in_week": 3, "from": "11:00", "to": "19:00" },
+        { "day_number_in_week": 6, "from": "08:00", "to": "14:00" }
+      ]
+    },
+    {
+      "name": "dr. Citra Lestari, Sp.A",
+      "code": "3044922",
+      "country": "id",
+      "age": 35,
+      "specialty": "Pediatrics",
+      "biography": "Known as the \"Child Whisperer\" of Unified Whiteglove, dr. Citra has a knack for calming even the most anxious toddlers. After her residency at Hasan Sadikin Hospital, she specialized in pediatric nutrition.\n\nHer examination room is a local legend in Bandung, designed to look more like a futuristic playground than a clinic. She believes that a \"fear-free\" environment is essential for early childhood development. Outside of work, she writes children's books that help kids understand how their bodies work.",
+      "image": "dr-citra-lestari-02.jpg",
+      "schedule": [
+        { "day_number_in_week": 1, "from": "10:00", "to": "17:00" },
+        { "day_number_in_week": 3, "from": "10:00", "to": "17:00" },
+        { "day_number_in_week": 5, "from": "10:00", "to": "17:00" },
+        { "day_number_in_week": 6, "from": "09:00", "to": "13:00" }
+      ]
+    },
+    {
+      "name": "dr. Reza Mahendra, Sp.A",
+      "code": "3044930",
+      "country": "id",
+      "age": 46,
+      "specialty": "Pediatrics",
+      "biography": "Dr. Reza specializes in pediatric allergies and immunology. He joined the clinic to provide comprehensive care for children struggling with Bandung's seasonal pollen and humidity issues. \n\nHe is famously patient and uses magic tricks to distract his young patients during vaccinations. He believes that pediatric care should be a partnership between the doctor and the parents. On weekends, he is a dedicated soccer dad and volunteers as a coach for a local youth league in Pasteur.",
+      "image": "dr-reza-mahendra.jpg",
+      "schedule": [
+        { "day_number_in_week": 2, "from": "09:00", "to": "16:00" },
+        { "day_number_in_week": 4, "from": "09:00", "to": "16:00" },
+        { "day_number_in_week": 5, "from": "13:00", "to": "19:00" }
+      ]
+    },
+    {
+      "name": "drg. Farell Hutomo",
+      "code": "4022819",
+      "country": "id",
+      "age": 40,
+      "specialty": "Dentist",
+      "biography": "Drg. Farell is the architect behind many of Bandung's most famous smiles. Specializing in aesthetic dentistry at Unified Whiteglove, he treats dental care as a blend of medicine and fine art.\n\nHe is meticulous about \"painless dentistry,\" utilizing the latest laser technology to ensure his high-profile clients never feel a hint of discomfort. When he isn't sculpting veneers, Farell is a massive jazz enthusiast and can frequently be found at the Braga Jazz Festival or playing the saxophone in his private studio.",
+      "image": "drg-farel-hutomo-02.jpg",
+      "schedule": [
+        { "day_number_in_week": 1, "from": "13:00", "to": "20:00" },
+        { "day_number_in_week": 2, "from": "13:00", "to": "20:00" },
+        { "day_number_in_week": 4, "from": "13:00", "to": "20:00" },
+        { "day_number_in_week": 6, "from": "10:00", "to": "15:00" }
+      ]
+    },
+    {
+      "name": "drg. Shanti Dewi",
+      "code": "4022825",
+      "country": "id",
+      "age": 33,
+      "specialty": "Dentist",
+      "biography": "Specializing in orthodontics and pediatric dentistry, drg. Shanti ensures that the clinic’s youngest patients grow up with perfect alignment. She is an expert in invisible aligner technology and conservative dental restoration.\n\nShe is known for her gentle touch and cheerful demeanor, making her a favorite for patients who have 'dentist phobia.' A fitness enthusiast, she can be found practicing Pilates daily or exploring the botanical gardens in Juanda Forest Park.",
+      "image": "drg-shanti-dewi-02.jpg",
+      "schedule": [
+        { "day_number_in_week": 1, "from": "08:00", "to": "14:00" },
+        { "day_number_in_week": 3, "from": "08:00", "to": "15:00" },
+        { "day_number_in_week": 5, "from": "08:00", "to": "15:00" },
+        { "day_number_in_week": 6, "from": "08:00", "to": "12:00" }
+      ]
+    },
+    {
+      "name": "dr. Sari Wijaya, Sp.KK",
+      "code": "5088173",
+      "country": "id",
+      "age": 35,
+      "specialty": "Dermatologist",
+      "biography": "As the head of the Medical Aesthetics wing at Unified Whiteglove, dr. Sari is the go-to expert for skin health in West Java. She spent five years in Seoul studying advanced dermatological procedures before returning to her hometown of Bandung.\n\nShe advocates for a \"holistic glow,\" focusing on how lifestyle and the cool Bandung climate affect skin vitality. Despite her busy schedule managing the clinic's elite skincare line, she stays grounded by tending to her extensive collection of rare orchids in her greenhouse in Dago Pakar.",
+      "image": "dr-sari-wijaya.jpg",
+      "schedule": [
+        { "day_number_in_week": 2, "from": "09:00", "to": "16:00" },
+        { "day_number_in_week": 3, "from": "09:00", "to": "16:00" },
+        { "day_number_in_week": 4, "from": "09:00", "to": "16:00" }
+      ]
+    },
+    {
+      "name": "dr. Kevin Wijaya, Sp.KK",
+      "code": "5088180",
+      "country": "id",
+      "age": 36,
+      "specialty": "Dermatologist",
+      "biography": "Dr. Kevin focuses on medical dermatology, including skin cancer screenings and complex inflammatory conditions like eczema and psoriasis. He shares a surname with dr. Sari (no relation), and together they provide a 360-degree approach to skin health.\n\nHe is a fan of technological integration, often using AI-assisted imaging to track mole changes over time. He is a weekend barista-hobbyist, often experimenting with different West Java coffee beans to find the perfect pour-over profile.",
+      "image": "dr-kevin-wijaya.jpg",
+      "schedule": [
+        { "day_number_in_week": 1, "from": "11:00", "to": "18:00" },
+        { "day_number_in_week": 5, "from": "11:00", "to": "18:00" },
+        { "day_number_in_week": 6, "from": "09:00", "to": "14:00" }
+      ]
+    },
+    {
+      "name": "dr. Alexander Collins, Sp.M",
+      "code": "6033947",
+      "country": "us",
+      "age": 57,
+      "specialty": "Ophthalmologist",
+      "biography": "A pioneer in refractive surgery, dr. Collins is the visionary behind Unified Whiteglove's \"ClearSight\" initiative. He relocated to Bandung after a prestigious stint at the Singapore National Eye Centre.\n\nHe is renowned for his steady hands and his obsession with optical technology, often being the first in Indonesia to trial new microsurgical tools. Patients appreciate his \"no-nonsense\" clarity when explaining surgical outcomes. In his downtime, he is a dedicated amateur astrophotographer, capturing the night sky from the clearer altitudes of Lembang.",
+      "image": "dr-adrian-pratama-02.jpg",
+      "schedule": [
+        { "day_number_in_week": 1, "from": "08:00", "to": "14:00" },
+        { "day_number_in_week": 3, "from": "08:00", "to": "14:00" },
+        { "day_number_in_week": 5, "from": "08:00", "to": "14:00" }
+      ]
+    },
+    {
+      "name": "dr. Melina Tan, Sp.M",
+      "code": "6033955",
+      "country": "id",
+      "age": 41,
+      "specialty": "Ophthalmologist",
+      "biography": "Dr. Melina specializes in medical retina and glaucoma management. Her approach is highly preventative, focusing on maintaining long-term vision for the clinic’s executive patients who spend long hours behind screens.\n\nShe is highly collaborative, often working with the cardiology team to monitor the ocular effects of hypertension. A lover of classical music, Melina plays the violin with a local chamber orchestra and believes that the discipline of music is what keeps her hands steady during surgery.",
+      "image": "dr-melina-tan.jpg",
+      "schedule": [
+        { "day_number_in_week": 2, "from": "13:00", "to": "19:00" },
+        { "day_number_in_week": 4, "from": "13:00", "to": "19:00" },
+        { "day_number_in_week": 6, "from": "08:00", "to": "13:00" }
+      ]
+    },
+    {
+      "name": "dr. Baskara Mahendra, Sp.KJ",
+      "code": "7011264",
+      "country": "id",
+      "age": 48,
+      "specialty": "Psychiatrist",
+      "biography": "Dr. Baskara provides a sanctuary of calm within the high-pressure environment of the Unified Whiteglove Clinic. He specializes in \"Executive Burnout\" and holistic mental wellness for Bandung's high-achievers.\n\nHis sessions are famous for being held in a room overlooking a private zen garden, as he believes the city's natural greenery is a vital part of the healing process. Unlike traditional clinical approaches, dr. Baskara integrates mindfulness and \"forest bathing\" into his treatment plans. He is a published poet and often spends his weekends hiking the hills of Tebing Keraton.",
+      "image": "dr-baskara-mahendra.jpg",
+      "schedule": [
+        { "day_number_in_week": 1, "from": "15:00", "to": "21:00" },
+        { "day_number_in_week": 3, "from": "15:00", "to": "21:00" },
+        { "day_number_in_week": 5, "from": "15:00", "to": "21:00" }
+      ]
+    },
+    {
+      "name": "dr. Nadia Utami, Sp.KJ",
+      "code": "7011272",
+      "country": "id",
+      "age": 36,
+      "specialty": "Psychiatrist",
+      "biography": "Dr. Nadia brings a modern, cognitive-behavioral approach to the clinic’s mental health wing. She specializes in anxiety disorders and the psychology of high-performance athletes.\n\nShe is known for her warm, relatable personality and her use of biofeedback technology to help patients visualize their stress responses. Dr. Nadia is a firm believer in the \"gut-brain connection\" and often collaborates with dr. Citra on pediatric mental health. She is a dedicated yoga instructor in her off-hours, hosting sunset sessions in the Ciumbuleuit valley.",
+      "image": "dr-nadia-utami.jpg",
+      "schedule": [
+        { "day_number_in_week": 2, "from": "09:00", "to": "16:00" },
+        { "day_number_in_week": 4, "from": "09:00", "to": "16:00" },
+        { "day_number_in_week": 6, "from": "09:00", "to": "15:00" }
+      ]
+    }
+  ]
+}

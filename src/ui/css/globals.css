@@ -138,6 +138,10 @@
   a {
     @apply cursor-pointer;
   }
+
+  .layout-padding {
+    @apply p-4 md:p-12;
+  }
 }
 
 @layer base {

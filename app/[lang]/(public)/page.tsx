@@ -1,12 +1,17 @@
+import ContactFormSection from "./sections/ContactForm/ContactFormSection";
+import DoctorsSection from "./sections/Doctors/DoctorsSection";
 import HeroSection from "./sections/HeroSection";
-import Services from "./sections/Services";
+import ServicesSection from "./sections/Services/ServicesSection";
+import StorySection from "./sections/StorySection";
 
 const Homepage = async () => {
   return (
-    <div className="min-h-[10000px]">
+    <div className="space-y-12">
       <HeroSection />
-
-      <Services />
+      <ServicesSection />
+      <DoctorsSection />
+      <StorySection />
+      <ContactFormSection />
     </div>
   );
 };

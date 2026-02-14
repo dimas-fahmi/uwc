@@ -1,4 +1,5 @@
 import type React from "react";
+import PublicFooter from "@/src/ui/components/ui/PublicFooter";
 import PublicNavbar from "@/src/ui/components/ui/PublicNavbar";
 
 const PublicLayout = ({
@@ -15,7 +16,7 @@ const PublicLayout = ({
       <main>{children}</main>
 
       {/* Footer */}
-      <footer></footer>
+      <PublicFooter />
     </div>
   );
 };
