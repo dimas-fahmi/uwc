@@ -1,0 +1,274 @@
+{
+  "reviews": [
+    {
+      "name": "Bambang Pamungkas",
+      "review": "Layanannya sangat eksklusif. Parkiran luas dan proses check-in sangat cepat.",
+      "rating": 4,
+      "image": "/bambang-p.jpg"
+    },
+    {
+      "name": "Cinta Laura",
+      "review": "The treatment quality is top notch. The staff is very well-trained and knowledgeable.",
+      "rating": 5,
+      "image": "/cinta-l.jpg"
+    },
+    {
+      "name": "Doni Salmanan",
+      "review": "Vibes-nya mewah banget, pengerjaannya juga sangat profesional. Mantap pokoknya.",
+      "rating": 5,
+      "image": "/doni-s.jpg"
+    },
+    {
+      "name": "Erika Carlina",
+      "review": "Gak pernah kecewa setiap ke UWC. Selalu dapet treatment yang paling pas buat kondisi kulit saat itu.",
+      "rating": 5,
+      "image": "/erika-c.jpg"
+    },
+    {
+      "name": "Ferry Salim",
+      "review": "Sangat menghargai privasi pelanggan. Tempatnya tenang dan sangat elegan.",
+      "rating": 5,
+      "image": "/ferry-s.jpg"
+    },
+    {
+      "name": "Gita Gutawa",
+      "review": "Pelayanannya sangat lembut dan menenangkan. Hasilnya natural dan memuaskan.",
+      "rating": 5,
+      "image": "/gita-g.jpg"
+    },
+    {
+      "name": "Haikal Kamil",
+      "review": "Staff-nya informatif, alat-alatnya modern. Salah satu klinik terbaik yang pernah saya kunjungi.",
+      "rating": 5,
+      "image": "/haikal-k.jpg"
+    },
+    {
+      "name": "Isyana Sarasvati",
+      "review": "Suka banget sama konsep interiornya yang menenangkan. Treatment-nya sangat efektif.",
+      "rating": 5,
+      "image": "/isyana-s.jpg"
+    },
+    {
+      "name": "Prasetyo Utomo",
+      "review": "Fasilitasnya juara. Ruang tunggunya nyaman banget berasa di lounge hotel bintang 5. Treatment-nya juga gak buru-buru.",
+      "rating": 5,
+      "image": "/prasetyo-u.jpg"
+    },
+    {
+      "name": "Quina Amanda",
+      "review": "Baru pertama kali coba chemical peeling di sini dan hasilnya memuaskan. Gak ada downtime yang parah karena dokternya kasih instruksi jelas.",
+      "rating": 5,
+      "image": "/quina-a.jpg"
+    },
+    {
+      "name": "Rizky Ramadhan",
+      "review": "Sebagai cowok, awalnya agak segan masuk klinik kecantikan. Tapi di UWC suasananya netral dan nyaman buat semua gender.",
+      "rating": 5,
+      "image": "/rizky-r.jpg"
+    },
+    {
+      "name": "Siska Amalia",
+      "review": "Sangat menghargai waktu pasien. Appointment jam 10, jam 10.05 sudah dipanggil masuk. Manajemen waktunya hebat.",
+      "rating": 5,
+      "image": "/siska-a.jpg"
+    },
+    {
+      "name": "Taufik Hidayat",
+      "review": "Klinik dengan peralatan paling update di Bandung. Laser-nya canggih dan pengerjaannya detail banget.",
+      "rating": 5,
+      "image": "/taufik-h.jpg"
+    },
+    {
+      "name": "Ursula Putri",
+      "review": "Wanginya enak banget begitu masuk lobby, bikin relax. Staff-nya ramah dan tidak judes sama sekali.",
+      "rating": 5,
+      "image": "/ursula-p.jpg"
+    },
+    {
+      "name": "Vania Clarissa",
+      "review": "Sudah langganan setahun di sini. Skin barrier aku yang tadinya rusak sekarang jauh lebih sehat berkat arahan dokter di UWC.",
+      "rating": 5,
+      "image": "/vania-c.jpg"
+    },
+    {
+      "name": "Wawan Setiawan",
+      "review": "Tempatnya strategis, parkirannya luas dan aman. Pelayanan dari security sampai dokter semuanya jempolan.",
+      "rating": 5,
+      "image": "/wawan-s.jpg"
+    },
+    {
+      "name": "Xandra Velove",
+      "review": "UWC emang 'hidden gem' buat yang cari ketenangan sambil perawatan. Interiornya minimalis tapi mewah banget.",
+      "rating": 4,
+      "image": "/xandra-v.jpg"
+    },
+    {
+      "name": "Yuda Pratama",
+      "review": "Dokternya sangat edukatif. Gak cuma kasih treatment, tapi juga kasih tips lifestyle buat jaga kesehatan kulit dari dalam.",
+      "rating": 5,
+      "image": "/yuda-p.jpg"
+    },
+    {
+      "name": "Zahra Nurul",
+      "review": "Suka banget sama facial massage-nya. Sangat relaxing sampai ketiduran. Keluar dari sini muka langsung glowing.",
+      "rating": 5,
+      "image": "/zahra-n.jpg"
+    },
+    {
+      "name": "Aditya Wijaya",
+      "review": "Gak salah pilih klinik buat persiapan wedding. Hasil treatment-nya nyata banget, bikin percaya diri di hari H.",
+      "rating": 5,
+      "image": "/aditya-w.jpg"
+    },
+    {
+      "name": "Bella Safira",
+      "review": "Produk skincare-nya juga bagus, cocok di kulit aku yang kombinasi. Gak bikin breakout sama sekali.",
+      "rating": 4,
+      "image": "/bella-s.jpg"
+    },
+    {
+      "name": "Chandra Hamzah",
+      "review": "Treatment buat acne scar di sini paling ampuh sih. Progresnya kelihatan banget setelah 3 kali kunjungan.",
+      "rating": 5,
+      "image": "/chandra-h.jpg"
+    },
+    {
+      "name": "Dina Lorenza",
+      "review": "Pelayanan pre-treatment dan post-treatment-nya sangat diperhatikan. Admin sering follow up nanya kondisi kulit setelah tindakan.",
+      "rating": 5,
+      "image": "/dina-l.jpg"
+    },
+    {
+      "name": "Eko Prasetyo",
+      "review": "Salah satu investasi terbaik buat diri sendiri adalah perawatan di UWC. Harga premium tapi kualitas emang berbicara.",
+      "rating": 5,
+      "image": "/eko-p.jpg"
+    },
+    {
+      "name": "Fitri Handayani",
+      "review": "Area tunggunya instagramable banget. Sambil nunggu bisa foto-foto cantik. Pelayanan juga cepet.",
+      "rating": 5,
+      "image": "/fitri-h.jpg"
+    },
+    {
+      "name": "Gilang Dirga",
+      "review": "Keren banget konsep kliniknya. Sangat modern dan higienis. Protokol kebersihannya bikin tenang.",
+      "rating": 5,
+      "image": "/gilang-d.jpg"
+    },
+    {
+      "name": "Hany Shofia",
+      "review": "Setiap sudut kliniknya estetik parah! Dokternya ramah banget dan penjelasannya mudah dimengerti.",
+      "rating": 5,
+      "image": "/hany-s.jpg"
+    },
+    {
+      "name": "Iwan Fals",
+      "review": "Tempatnya tenang, cocok buat yang mau self-care di akhir pekan. Staff-nya sangat profesional.",
+      "rating": 5,
+      "image": "/iwan-f.jpg"
+    },
+    {
+      "name": "Jessica Mila",
+      "review": "UWC beneran standar baru buat klinik kecantikan di Indonesia. Selalu puas setiap habis kunjungan.",
+      "rating": 5,
+      "image": "/jessica-m.jpg"
+    },
+    {
+      "name": "Kevin Sanjaya",
+      "review": "Facial-nya mantap, komedo bersih semua tapi gak bikin muka merah-merah atau bengkak.",
+      "rating": 5,
+      "image": "/kevin-s.jpg"
+    },
+    {
+      "name": "Lestari Putri",
+      "review": "Sistem bookingnya rapi banget via web atau WA. Gak perlu antri lama di lokasi.",
+      "rating": 4,
+      "image": "/lestari-p.jpg"
+    },
+    {
+      "name": "Muhammad Fadil",
+      "review": "Klinik premium yang humble. Meskipun tempatnya mewah, staff-nya tetep ramah dan gak intimidating.",
+      "rating": 5,
+      "image": "/fadil-m.jpg"
+    },
+    {
+      "name": "Nina Zatulini",
+      "review": "Puas banget sama laser treatment-nya. Flek hitam di wajah mulai memudar. Worth it banget!",
+      "rating": 5,
+      "image": "/nina-z.jpg"
+    },
+    {
+      "name": "Oki Setiana",
+      "review": "Tempatnya sangat privat dan nyaman. Cocok buat yang butuh ketenangan saat treatment.",
+      "rating": 5,
+      "image": "/oki-s.jpg"
+    },
+    {
+      "name": "Putri Marino",
+      "review": "Kualitas alat-alatnya kerasa banget bedanya sama klinik lain. Lebih canggih dan efektif.",
+      "rating": 5,
+      "image": "/putri-m.jpg"
+    },
+    {
+      "name": "Rangga Azof",
+      "review": "Treatment di sini gak cuma soal hasil, tapi juga soal pengalaman. Pelayanan dari hati.",
+      "rating": 5,
+      "image": "/rangga-a.jpg"
+    },
+    {
+      "name": "Sita Tyasutami",
+      "review": "Suka sama aromaterapi di dalam ruangan treatment-nya. Bikin rileks banget.",
+      "rating": 5,
+      "image": "/sita-t.jpg"
+    },
+    {
+      "name": "Teddy Syah",
+      "review": "Dokternya jujur banget, kalau kulit lagi gak butuh treatment tertentu pasti dibilang. Gak money oriented.",
+      "rating": 5,
+      "image": "/teddy-s.jpg"
+    },
+    {
+      "name": "Utami Rizki",
+      "review": "Best facial experience in Bandung so far. Therapist-nya telaten dan lembut banget tangannya.",
+      "rating": 5,
+      "image": "/utami-r.jpg"
+    },
+    {
+      "name": "Vicky Shu",
+      "review": "Klinik langganan kalau lagi pulang ke Bandung. Kualitas pelayanannya konsisten dari dulu.",
+      "rating": 5,
+      "image": "/vicky-s.jpg"
+    },
+    {
+      "name": "Wisnu Wardhana",
+      "review": "Tempatnya bersih banget sampai ke toiletnya pun wangi dan bersih. Detail kecil sangat diperhatikan.",
+      "rating": 5,
+      "image": "/wisnu-w.jpg"
+    },
+    {
+      "name": "Xena Ariyanto",
+      "review": "Awalnya iseng coba karena lihat review, ternyata emang sebagus itu. Gak nyesel sama sekali.",
+      "rating": 5,
+      "image": "/xena-a.jpg"
+    },
+    {
+      "name": "Yasmine Wildblood",
+      "review": "Treatment favorit aku silk peel di sini. Muka langsung halus dan cerah seketika.",
+      "rating": 5,
+      "image": "/yasmine-w.jpg"
+    },
+    {
+      "name": "Zul Ariffin",
+      "review": "Professional staff, great ambiance, and excellent result. UWC is definitely the best in class.",
+      "rating": 5,
+      "image": "/zul-a.jpg"
+    },
+    {
+      "name": "Anisa Rahma",
+      "review": "Senang sekali konsultasi di sini, dokternya sangat sabar mendengarkan keluhan saya.",
+      "rating": 5,
+      "image": "/anisa-r.jpg"
+    }
+  ]
+}

@@ -10,7 +10,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${poppinsFont.variable} antialiased max-w-[1440px] mx-auto`}
+        className={`${poppinsFont.variable} antialiased max-w-[1440px] mx-auto w-full overflow-x-hidden custom-scrollbar`}
       >
         <NextIntlClientProvider>{children}</NextIntlClientProvider>
       </body>

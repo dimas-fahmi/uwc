@@ -1,3 +1,5 @@
+"use client";
+
 import { AnimatePresence, motion } from "framer-motion";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { useState } from "react";
@@ -17,8 +19,6 @@ const MobileContainer = () => {
     currentPage * itemsPerPage,
     (currentPage + 1) * itemsPerPage,
   );
-
-  console.log(visibleServices);
 
   const handlePrev = () => {
     setDirection(-1);
