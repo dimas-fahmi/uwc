@@ -1,5 +1,6 @@
 "use client";
 
+import { AnimatePresence, motion } from "framer-motion";
 import {
   ChevronDown,
   ChevronLeft,
@@ -144,48 +145,65 @@ const DoctorsSection = () => {
           <div className="flex flex-col gap-4 flex-1">
             <StarRating min={5} max={5} />
 
-            <Tooltip>
-              <TooltipTrigger asChild>
-                <h1 className="text-3xl md:text-4xl font-bold line-clamp-1">
-                  {doctors[activeIndex].name}
-                </h1>
-              </TooltipTrigger>
-              <TooltipContent>{doctors[activeIndex].name}</TooltipContent>
-            </Tooltip>
+            <AnimatePresence mode="wait">
+              <motion.div
+                key={doctors[activeIndex].name}
+                initial={{ opacity: 0, scale: 0.95 }}
+                animate={{ opacity: 1, scale: 1 }}
+                exit={{ opacity: 0, scale: 1.05 }}
+                transition={{ duration: 0.3 }}
+              >
+                <Tooltip>
+                  <TooltipTrigger asChild>
+                    <h1 className="text-3xl md:text-4xl font-bold line-clamp-1">
+                      {doctors[activeIndex].name}
+                    </h1>
+                  </TooltipTrigger>
+                  <TooltipContent>{doctors[activeIndex].name}</TooltipContent>
+                </Tooltip>
 
-            <ScrollArea
-              key={activeIndex}
-              className="max-h-35 pe-4 overflow-y-scroll scrollbar-none"
-            >
-              <p className="whitespace-pre-wrap">
-                {doctors[activeIndex].biography}
-              </p>
-            </ScrollArea>
+                <ScrollArea className="max-h-35 pe-4 overflow-y-scroll scrollbar-none">
+                  <p className="whitespace-pre-wrap">
+                    {doctors[activeIndex].biography}
+                  </p>
+                </ScrollArea>
+              </motion.div>
+            </AnimatePresence>
 
             <div className="flex-1 flex items-end">
               {/* Wrapper */}
               <div className="space-y-4 w-full">
                 {/* Metadata */}
-                <RenderMetadata
-                  metadatas={[
-                    {
-                      title: "Position",
-                      value: doctors[activeIndex].specialty,
-                    },
-                    { title: "Age", value: `${doctors[activeIndex].age}` },
-                    {
-                      title: "Country",
-                      value: (
-                        <span className="uppercase">
-                          {doctors[activeIndex].country}
-                        </span>
-                      ),
-                    },
-                    { title: "Code", value: doctors[activeIndex].code },
-                  ]}
-                  borderIndex={isDesktop ? [1, 2, 3] : [1, 3]}
-                  className="grid grid-cols-2 md:flex md:overflow-x-scroll no-scrollbar md:pb-4"
-                />
+                <AnimatePresence mode="wait">
+                  <motion.div
+                    key={doctors[activeIndex].name}
+                    initial={{ opacity: 0, scale: 0.95 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    exit={{ opacity: 0, scale: 1.05 }}
+                    transition={{ duration: 0.3 }}
+                  >
+                    <RenderMetadata
+                      metadatas={[
+                        {
+                          title: "Position",
+                          value: doctors[activeIndex].specialty,
+                        },
+                        { title: "Age", value: `${doctors[activeIndex].age}` },
+                        {
+                          title: "Country",
+                          value: (
+                            <span className="uppercase">
+                              {doctors[activeIndex].country}
+                            </span>
+                          ),
+                        },
+                        { title: "Code", value: doctors[activeIndex].code },
+                      ]}
+                      borderIndex={isDesktop ? [1, 2, 3] : [1, 3]}
+                      className="grid grid-cols-2 md:flex md:overflow-x-scroll no-scrollbar md:pb-4"
+                    />
+                  </motion.div>
+                </AnimatePresence>
 
                 {/* Controller */}
                 <div className="flex items-center gap-4">
@@ -235,15 +253,24 @@ const DoctorsSection = () => {
           </div>
 
           {/* Image */}
-          <div className="flex max-h-[380px] items-center justify-end">
-            <Image
-              width={1080}
-              height={1080}
-              src={`/res/arts/${doctors[activeIndex].image}`}
-              alt="Dr. Adrian Pratama"
-              className="rounded-2xl w-full h-full object-cover aspect-square border shadow-2xl"
-            />
-          </div>
+          <AnimatePresence mode="wait">
+            <motion.div
+              key={doctors[activeIndex].image}
+              initial={{ opacity: 0, scale: 0.95 }}
+              animate={{ opacity: 1, scale: 1 }}
+              exit={{ opacity: 0, scale: 1.05 }}
+              transition={{ duration: 0.3 }}
+              className="flex max-h-[380px] items-center justify-end relative"
+            >
+              <Image
+                width={1080}
+                height={1080}
+                src={`https://uwc-nine.vercel.app/res/arts/${doctors[activeIndex].image}`}
+                alt="Dr. Adrian Pratama"
+                className="rounded-2xl w-full h-full object-cover aspect-square border shadow-2xl"
+              />
+            </motion.div>
+          </AnimatePresence>
         </div>
       )}
     </section>

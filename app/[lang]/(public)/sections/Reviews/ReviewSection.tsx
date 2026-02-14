@@ -84,7 +84,7 @@ const ReviewSection = () => {
     <section id="reviews">
       <Header />
 
-      <div className="block space-y-6 mt-6 layout-padding overflow-hidden">
+      <div className="block space-y-6 layout-padding overflow-hidden">
         {/* Cards Container */}
         <div className="relative min-h-[880px] md:min-h-[280px]">
           <AnimatePresence initial={false} custom={direction}>

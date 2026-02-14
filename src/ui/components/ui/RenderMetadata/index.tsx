@@ -29,6 +29,7 @@ const RenderMetadata = ({
         <div
           key={index}
           className={`space-y-1 ${borderIndex.includes(index) ? "border-l ps-4" : ""} pe-4`}
+          suppressHydrationWarning
         >
           <h6 className="text-xs font-light opacity-80">{m.title}</h6>
           <div className="font-light line-clamp-1">{m.value}</div>

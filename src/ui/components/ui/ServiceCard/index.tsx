@@ -19,7 +19,7 @@ export const ServiceCard = ({ service }: { service: ServiceType }) => {
           height={720}
           src={service.image}
           alt="tt"
-          className="w-full object-cover object-center min-w-[60vw] max-h-[280px] brightness-50 drag-none"
+          className="w-full object-cover object-center min-w-[60vw] min-h-[280px] max-h-[280px] brightness-50 drag-none"
         />
       </div>
 
