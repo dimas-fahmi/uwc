@@ -175,6 +175,10 @@
   border-radius: var(--radius-lg);
 }
 
+.custom-scrollbar.no-track::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
 /* Chrome, Safari, Edge, Opera */
 .outer-spin-none::-webkit-outer-spin-button,
 .outer-spin-none::-webkit-inner-spin-button {

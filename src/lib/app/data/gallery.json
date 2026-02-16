@@ -1,0 +1,84 @@
+{
+  "gallery": [
+    {
+      "title": "Premium Dental Suite",
+      "description": "Experience pain-free restorative and cosmetic dentistry using the latest laser technology in a relaxing environment.",
+      "alt": "A modern dental chair with ergonomic design and overhead surgical lighting in a minimalist suite.",
+      "taken_at": "2026-02-16T14:00:00+00:00",
+      "location": "Jl. Asia-Afrika, Bandung, West Java",
+      "path": "https://images.pexels.com/photos/6812453/pexels-photo-6812453.jpeg"
+    },
+    {
+      "title": "Serene Mental Health Lounge",
+      "description": "A private, soundproof space designed for therapeutic sessions, focusing on comfort and emotional well-packages.",
+      "alt": "Comfortable velvet armchairs in a dimly lit room with soft wood accents and indoor greenery.",
+      "taken_at": "2026-02-16T14:15:00+00:00",
+      "location": "Jl. Asia-Afrika, Bandung, West Java",
+      "path": "https://images.pexels.com/photos/1040893/pexels-photo-1040893.jpeg"
+    },
+    {
+      "title": "Pediatric Play & Care Wing",
+      "description": "Making healthcare a breeze for the little ones with our colorful, child-friendly examination rooms.",
+      "alt": "A pediatric exam room featuring wall murals of friendly animals and a toy-filled waiting corner.",
+      "taken_at": "2026-02-16T14:30:00+00:00",
+      "location": "Jl. Asia-Afrika, Bandung, West Java",
+      "path": "https://images.pexels.com/photos/6473185/pexels-photo-6473185.jpeg"
+    },
+    {
+      "title": "Dermatology & Aesthetic Center",
+      "description": "Advanced skin diagnostics and non-invasive rejuvenation treatments led by expert dermatologists.",
+      "alt": "A sleek aesthetic room with high-end laser equipment and a pristine white treatment bed.",
+      "taken_at": "2026-02-16T14:45:00+00:00",
+      "location": "Jl. Asia-Afrika, Bandung, West Java",
+      "path": "https://images.pexels.com/photos/10610920/pexels-photo-10610920.jpeg"
+    },
+    {
+      "title": "ENT (Otolaryngology) Diagnostics",
+      "description": "Comprehensive ear, nose, and throat evaluations utilizing high-definition endoscopic imaging.",
+      "alt": "Specialized ENT workstation with fiber optic scopes and digital monitor displays.",
+      "taken_at": "2026-02-16T15:00:00+00:00",
+      "location": "Jl. Asia-Afrika, Bandung, West Java",
+      "path": "https://medschool.umich.edu/sites/default/files/styles/jumbo_16_9/public/2023-11/Oto-peds-clinic-ExamRoom3.jpg?h=3f2aef66&itok=vPqKYQJ1"
+    },
+    {
+      "title": "Executive Health Screening Suite",
+      "description": "Our 'Whiteglove' general check-up service offers a seamless, comprehensive health assessment in a VIP setting.",
+      "alt": "An executive check-up room with a blood pressure monitor, EKG machine, and luxury lounge seating.",
+      "taken_at": "2026-02-16T15:15:00+00:00",
+      "location": "Jl. Asia-Afrika, Bandung, West Java",
+      "path": "https://images.pexels.com/photos/11722768/pexels-photo-11722768.jpeg"
+    },
+    {
+      "title": "Advanced Ultrasound Lab",
+      "description": "High-resolution 4D imaging for prenatal care and internal organ diagnostics.",
+      "alt": "A dark-themed ultrasound room with a glowing monitor showing a high-detail scan.",
+      "taken_at": "2026-02-16T15:30:00+00:00",
+      "location": "Jl. Asia-Afrika, Bandung, West Java",
+      "path": "https://www.ahu.edu/sites/default/files/styles/qhd/public/media/sonography_lab_orlando.jpeg?itok=EVrZkYRH"
+    },
+    {
+      "title": "In-House Pharmacy & Apothecary",
+      "description": "Pick up your prescriptions instantly at our premium, fully-stocked pharmacy lounge.",
+      "alt": "A wide, organized pharmaceutical counter with glass displays and professional pharmacists.",
+      "taken_at": "2026-02-16T15:45:00+00:00",
+      "location": "Jl. Asia-Afrika, Bandung, West Java",
+      "path": "https://images.pexels.com/photos/30769537/pexels-photo-30769537.jpeg"
+    },
+    {
+      "title": "The Whiteglove Lobby",
+      "description": "Start your wellness journey in our 5-star hospitality-inspired reception area.",
+      "alt": "A grand lobby with marble floors, a concierge desk, and a coffee bar for waiting patients.",
+      "taken_at": "2026-02-16T16:00:00+00:00",
+      "location": "Jl. Asia-Afrika, Bandung, West Java",
+      "path": "https://images.pexels.com/photos/3124079/pexels-photo-3124079.jpeg"
+    },
+    {
+      "title": "Physiotherapy & Recovery Zone",
+      "description": "Tailored physical therapy programs to help you regain mobility and strength.",
+      "alt": "A bright studio with parallel bars, exercise balls, and a treatment table for physical therapy.",
+      "taken_at": "2026-02-16T16:15:00+00:00",
+      "location": "Jl. Asia-Afrika, Bandung, West Java",
+      "path": "https://media.istockphoto.com/id/498715206/photo/physical-therapy-room.jpg?s=612x612&w=0&k=20&c=nK0rMKD9oCk7nPi_OR9FrHJ4USzdy79kTxhczBaE-wE="
+    }
+  ]
+}

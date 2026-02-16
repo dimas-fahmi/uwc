@@ -2,6 +2,7 @@
 
 import { ArrowUpRight, Calendar } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 import RenderMetadata from "@/src/ui/components/ui/RenderMetadata";
 import StarRating from "@/src/ui/components/ui/StarRating";
 import { Button } from "@/src/ui/shadcn/components/ui/button";
@@ -56,9 +57,16 @@ const HeroSection = () => {
               <ArrowUpRight />
               Book an Appointment
             </Button>
-            <Button size={"lg"} variant={"outline"} className="hidden md:flex">
-              <Calendar />
-              {`Doctor's Schedule`}
+            <Button
+              asChild
+              size={"lg"}
+              variant={"outline"}
+              className="hidden md:flex"
+            >
+              <Link href={"/schedule"}>
+                <Calendar />
+                {`Doctor's Schedule`}
+              </Link>
             </Button>
           </div>
 

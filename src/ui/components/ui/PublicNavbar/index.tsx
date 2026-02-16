@@ -2,6 +2,7 @@
 
 import { ChevronDown, Menu, Search } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 import { Button } from "@/src/ui/shadcn/components/ui/button";
 
 const PublicNavbar = () => {
@@ -11,12 +12,14 @@ const PublicNavbar = () => {
       <div>
         {/* Logo */}
         <div>
-          <Image
-            width={120}
-            height={60}
-            src={"/res/logo/label-cropped.png"}
-            alt="UWC Logo"
-          />
+          <Link href={"/"}>
+            <Image
+              width={120}
+              height={60}
+              src={"/res/logo/label-cropped.png"}
+              alt="UWC Logo"
+            />
+          </Link>
         </div>
 
         {/* Navigation */}
