@@ -24,7 +24,7 @@ const ParvusLayout = ({
           </Link>
         </header>
 
-        <div className="flex-1 h-full overflow-x-hidden overflow-y-scroll custom-scrollbar pe-4 no-track">
+        <div className="flex-1 h-full overflow-x-hidden overflow-y-scroll custom-scrollbar no-track md:pe-[5px]">
           {children}
         </div>
 

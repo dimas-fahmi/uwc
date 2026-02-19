@@ -10,6 +10,7 @@ import {
 } from "lucide-react";
 import Image from "next/image";
 import { useMediaQuery } from "react-responsive";
+import { SPECIALTIES, SPECIALTY_METADATAS } from "@/src/lib/app";
 import doctorsData from "@/src/lib/app/data/doctors.json";
 import RenderMetadata from "@/src/ui/components/ui/RenderMetadata";
 import StarRating from "@/src/ui/components/ui/StarRating";
@@ -29,17 +30,6 @@ import {
   TooltipTrigger,
 } from "@/src/ui/shadcn/components/ui/tooltip";
 import { useDoctorStore } from "./DoctorStore";
-
-const SPECIALTIES = [
-  "Otolaryngologist",
-  "General Practitioner",
-  "Cardiologist",
-  "Pediatrics",
-  "Dentist",
-  "Dermatologist",
-  "Ophthalmologist",
-  "Psychiatrist",
-] as const;
 
 const Header = () => {
   const { filter, setFilter, setActiveIndex } = useDoctorStore();
@@ -96,20 +86,24 @@ const Header = () => {
               {/* Filters */}
               <ScrollArea className="h-48 pe-4 overflow-y-scroll scrollbar-none">
                 <div className="grid grid-cols-1 gap-2 border-b pb-2">
-                  {SPECIALTIES.map((s) => (
-                    <button
-                      type="button"
-                      key={s}
-                      disabled={filter === s}
-                      onClick={() => {
-                        setActiveIndex(0);
-                        setFilter(s);
-                      }}
-                      className={`text-start text-xs border py-2 px-4 rounded-lg ${filter === s ? "bg-primary text-primary-foreground" : ""}`}
-                    >
-                      {s}
-                    </button>
-                  ))}
+                  {SPECIALTIES.map((s) => {
+                    const Icon = SPECIALTY_METADATAS[s].icon;
+                    return (
+                      <button
+                        type="button"
+                        key={s}
+                        disabled={filter === s}
+                        onClick={() => {
+                          setActiveIndex(0);
+                          setFilter(s);
+                        }}
+                        className={`text-start flex items-center gap-2 text-xs border py-2 px-4 rounded-lg ${filter === s ? "bg-primary text-primary-foreground" : ""}`}
+                      >
+                        <Icon className="w-5 h-5" />
+                        {SPECIALTY_METADATAS[s].name}
+                      </button>
+                    );
+                  })}
                 </div>
               </ScrollArea>
             </PopoverContent>
