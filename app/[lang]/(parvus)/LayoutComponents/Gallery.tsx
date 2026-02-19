@@ -50,6 +50,8 @@ const LayoutGallery = () => {
               className: "border border-white/25",
               indicatorClassName: "bg-white/80",
             }}
+            loopForward
+            loopBack
           />
         </div>
       </div>

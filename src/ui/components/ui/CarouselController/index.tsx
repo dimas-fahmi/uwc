@@ -1,6 +1,6 @@
 "use client";
 
-import { ChevronLeft, ChevronRight } from "lucide-react";
+import { ChevronLeft, ChevronRight, RotateCcw, RotateCw } from "lucide-react";
 import {
   Progress,
   type ProgressProps,
@@ -10,6 +10,8 @@ export interface CarouselControllerProps {
   activeIndex?: number;
   setActiveIndex?: (number: number) => void;
   totalLength?: number;
+  loopBack?: boolean;
+  loopForward?: boolean;
 }
 
 const CarouselController = ({
@@ -17,6 +19,8 @@ const CarouselController = ({
   setActiveIndex,
   totalLength,
   progressProps,
+  loopBack,
+  loopForward,
 }: CarouselControllerProps & { progressProps?: ProgressProps }) => {
   const isLastIndex =
     totalLength && typeof activeIndex === "number"
@@ -29,13 +33,26 @@ const CarouselController = ({
       <button
         type="button"
         className="min-w-8 max-w-8 min-h-8 max-h-8 rounded-full border flex items-center justify-center disabled:opacity-50"
-        disabled={activeIndex === 0 || !setActiveIndex || !activeIndex}
+        disabled={activeIndex === 0 && !loopForward}
         onClick={() => {
           if (typeof activeIndex !== "number" || !setActiveIndex) return;
-          setActiveIndex(activeIndex - 1);
+
+          if (
+            activeIndex === 0 &&
+            loopForward &&
+            typeof totalLength === "number"
+          ) {
+            setActiveIndex(totalLength - 1);
+          } else {
+            setActiveIndex(activeIndex - 1);
+          }
         }}
       >
-        <ChevronLeft className="w-5 h-5" />
+        {activeIndex === 0 && loopForward ? (
+          <RotateCw className="w-5 h-5" />
+        ) : (
+          <ChevronLeft className="w-5 h-5" />
+        )}
       </button>
 
       {/* State */}
@@ -50,14 +67,22 @@ const CarouselController = ({
       <button
         type="button"
         className="min-w-8 max-w-8 min-h-8 max-h-8 rounded-full border flex items-center justify-center disabled:opacity-50"
-        disabled={isLastIndex}
+        disabled={isLastIndex && !loopBack}
         onClick={() => {
           if (typeof activeIndex !== "number" || !setActiveIndex) return;
 
-          setActiveIndex(activeIndex + 1);
+          if (loopBack && isLastIndex) {
+            setActiveIndex(0);
+          } else {
+            setActiveIndex(activeIndex + 1);
+          }
         }}
       >
-        <ChevronRight className="w-5 h-5" />
+        {loopBack && isLastIndex ? (
+          <RotateCcw className="w-5 h-5" />
+        ) : (
+          <ChevronRight className="w-5 h-5" />
+        )}
       </button>
 
       <Progress
