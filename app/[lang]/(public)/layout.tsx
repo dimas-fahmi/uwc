@@ -7,6 +7,8 @@ import OnlyForShowcaseDialog from "@/src/ui/components/ui/OnlyForShowecaseDialog
 import { useOFSDStore } from "@/src/ui/components/ui/OnlyForShowecaseDialog/OFSDStore";
 import PublicFooter from "@/src/ui/components/ui/PublicFooter";
 import PublicNavbar from "@/src/ui/components/ui/PublicNavbar";
+import PublicSidebar from "@/src/ui/components/ui/PublicSidebar";
+import { SidebarProvider } from "@/src/ui/shadcn/components/ui/sidebar";
 
 const PublicLayout = ({
   children,
@@ -23,19 +25,22 @@ const PublicLayout = ({
   }, [showedOnlyForShowcase]);
 
   return (
-    <div>
-      {/* Navbar */}
-      <PublicNavbar />
+    <SidebarProvider>
+      <PublicSidebar />
+      <main className="flex-1 overflow-hidden">
+        {/* Navbar */}
+        <PublicNavbar />
 
-      {/* Content */}
-      <main>{children}</main>
+        {/* Content */}
+        <div>{children}</div>
 
-      {/* Footer */}
-      <PublicFooter />
+        {/* Footer */}
+        <PublicFooter />
 
-      {/* Modals */}
-      <OnlyForShowcaseDialog />
-    </div>
+        {/* Modals */}
+        <OnlyForShowcaseDialog />
+      </main>
+    </SidebarProvider>
   );
 };
 

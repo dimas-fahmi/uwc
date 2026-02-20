@@ -68,13 +68,25 @@ const ScheduleContainer = () => {
   const router = useRouter();
 
   const params = useSearchParams();
-  const department = params.get("department");
+  const state = params.get("state");
 
   useEffect(() => {
+    if (!state) return;
+    const [department, sd] = state.split("-s-");
+
     if (department && SPECIALTIES.includes(department as Specialty)) {
       setSelectedSpecialty(department as Specialty);
     }
-  }, [department]);
+
+    console.log(sd);
+    const sdParsed = new Date(Number(sd));
+    console.log(sdParsed);
+
+    if (selectedDate && !Number.isNaN(sdParsed)) {
+      setWeekStart(startOfWeek(sdParsed));
+      setSelectedDate(sdParsed);
+    }
+  }, [state]);
 
   return (
     <motion.div
@@ -191,9 +203,10 @@ const ScheduleContainer = () => {
                   variant={"outline"}
                   size={"sm"}
                   onClick={() => {
-                    router.push(
-                      `/signin?redTo=/schedule?department=${selectedSpecialty}  `,
-                    );
+                    const p = new URLSearchParams({
+                      state: `${selectedSpecialty}-s-${selectedDate.getTime()}`,
+                    });
+                    router.push(`/signin?redTo=/schedule?${p.toString()}`);
                   }}
                 >
                   Book

@@ -4,8 +4,11 @@ import { ChevronDown, Menu, Search } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/src/ui/shadcn/components/ui/button";
+import { useSidebar } from "@/src/ui/shadcn/components/ui/sidebar";
 
 const PublicNavbar = () => {
+  const { setOpen, setOpenMobile } = useSidebar();
+
   return (
     <nav className="p-4 md:px-12 flex items-center justify-between">
       {/* Logo & Navigation */}
@@ -38,7 +41,13 @@ const PublicNavbar = () => {
           </Button>
         </div>
 
-        <Button variant={"ghost"}>
+        <Button
+          variant={"ghost"}
+          onClick={() => {
+            setOpen(true);
+            setOpenMobile(true);
+          }}
+        >
           Menu <Menu />
         </Button>
       </div>
