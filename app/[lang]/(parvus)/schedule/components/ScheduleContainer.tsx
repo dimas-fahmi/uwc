@@ -10,9 +10,13 @@ import {
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { AnimatePresence, motion } from "motion/react";
 import Image from "next/image";
-import { useRouter } from "next/navigation";
-import { useMemo, useState } from "react";
-import { SPECIALTY_METADATAS } from "@/src/lib/app";
+import { useRouter, useSearchParams } from "next/navigation";
+import { useEffect, useMemo, useState } from "react";
+import {
+  SPECIALTIES,
+  SPECIALTY_METADATAS,
+  type Specialty,
+} from "@/src/lib/app";
 import doctorsData from "@/src/lib/app/data/doctors.json";
 import { Button } from "@/src/ui/shadcn/components/ui/button";
 import {
@@ -23,7 +27,7 @@ import {
 import { useScheduleStore } from "../scheduleStore";
 
 const ScheduleContainer = () => {
-  const { selectedSpecialty } = useScheduleStore();
+  const { selectedSpecialty, setSelectedSpecialty } = useScheduleStore();
   const currentWeekStart = useMemo(() => startOfWeek(new Date()), []);
   const [weekStart, setWeekStart] = useState(() =>
     startOfWeek(startOfTomorrow()),
@@ -62,6 +66,15 @@ const ScheduleContainer = () => {
   const isCurrentWeek = weekStart.getTime() === currentWeekStart.getTime();
 
   const router = useRouter();
+
+  const params = useSearchParams();
+  const department = params.get("department");
+
+  useEffect(() => {
+    if (department && SPECIALTIES.includes(department as Specialty)) {
+      setSelectedSpecialty(department as Specialty);
+    }
+  }, [department]);
 
   return (
     <motion.div
@@ -178,7 +191,9 @@ const ScheduleContainer = () => {
                   variant={"outline"}
                   size={"sm"}
                   onClick={() => {
-                    router.push("/signin");
+                    router.push(
+                      `/signin?redTo=/schedule?department=${selectedSpecialty}  `,
+                    );
                   }}
                 >
                   Book

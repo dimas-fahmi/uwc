@@ -1,11 +1,14 @@
 "use client";
 
 import { Loader } from "lucide-react";
+import { useSearchParams } from "next/navigation";
 import { useEffect, useState } from "react";
+import { authClient } from "@/src/lib/auth/client";
 import {
   OAUTH_PROVIDER_METADATA,
   type OAuthProvider,
 } from "@/src/lib/auth/configs";
+import { isInternalUrl, isValidUrl } from "@/src/lib/utils/url";
 import {
   Tooltip,
   TooltipContent,
@@ -33,6 +36,12 @@ const SocialSignInButton = ({ social }: SocialSignInButtonProps) => {
     return () => clearTimeout(debouncer);
   }, [isClicked]);
 
+  const params = useSearchParams();
+  const redTo = params.get("redTo");
+  const isRedToValid = redTo
+    ? isValidUrl(redTo) && isInternalUrl(redTo)
+    : false;
+
   return (
     <Tooltip>
       <TooltipTrigger asChild>
@@ -42,8 +51,14 @@ const SocialSignInButton = ({ social }: SocialSignInButtonProps) => {
             "flex items-center justify-center gap-2 border px-4 py-2 rounded-2xl disabled:opacity-60 not-disabled:hover:bg-primary not-disabled:hover:text-primary-foreground transition-all duration-200",
           )}
           disabled={!metadata.supported}
-          onClick={() => {
+          onClick={async () => {
+            if (!metadata.supported) return;
+
             setIsClicked(true);
+            await authClient.signIn.social({
+              provider: social,
+              callbackURL: isRedToValid ? (redTo as string) : "/profile",
+            });
           }}
         >
           {isClicked ? (

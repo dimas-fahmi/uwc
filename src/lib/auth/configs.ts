@@ -28,7 +28,7 @@ export const OAUTH_PROVIDER_METADATA = {
   discord: {
     name: "Discord",
     logo: Discord,
-    supported: false,
+    supported: true,
   },
   facebook: {
     name: "Facebook",
@@ -38,7 +38,7 @@ export const OAUTH_PROVIDER_METADATA = {
   github: {
     name: "GitHub",
     logo: Github,
-    supported: false,
+    supported: true,
   },
   google: {
     name: "Google",
