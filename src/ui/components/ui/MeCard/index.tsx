@@ -18,24 +18,36 @@ import {
   DropdownMenuTrigger,
 } from "@/src/ui/shadcn/components/ui/dropdown-menu";
 import { Skeleton } from "@/src/ui/shadcn/components/ui/skeleton";
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipTrigger,
+} from "@/src/ui/shadcn/components/ui/tooltip";
 
 const MeCard = () => {
   const { data, isPending } = authClient.useSession();
   const user = data?.user;
+  const aMemberSince = user?.createdAt
+    ? formatDistance(user?.createdAt, new Date(), {
+        addSuffix: true,
+      }).replace("about", "")
+    : null;
 
   return (
     <div
       className={`p-4 border rounded-lg shadow-md flex items-center justify-between ${!isPending && !user ? "hidden" : ""}`}
+      suppressHydrationWarning
     >
-      <div className="flex items-center gap-2">
+      <div className="flex items-center gap-2" suppressHydrationWarning>
         {isPending ? (
           <Skeleton className="w-12 h-12 rounded-full" />
         ) : (
-          <Avatar className="w-12 h-12">
+          <Avatar className="w-12 h-12" suppressHydrationWarning>
             {user?.image && (
               <AvatarImage
                 src={user.image}
                 alt={`${user?.name || "User"}'s Avatar`}
+                suppressHydrationWarning
               />
             )}
             <AvatarFallback>DF</AvatarFallback>
@@ -51,16 +63,17 @@ const MeCard = () => {
             </h1>
           )}
 
-          {isPending ? (
+          {isPending || !aMemberSince ? (
             <Skeleton className="h-2 w-16" />
           ) : (
-            <p className="text-xs font-light capitalize">
-              {user?.createdAt
-                ? formatDistance(user?.createdAt, new Date(), {
-                    addSuffix: true,
-                  })
-                : "unknown"}
-            </p>
+            <Tooltip>
+              <TooltipTrigger asChild>
+                <p className="text-xs font-light capitalize">
+                  Since {aMemberSince}
+                </p>
+              </TooltipTrigger>
+              <TooltipContent className="max-w-md">{`${user?.name} has been a member since ${aMemberSince}`}</TooltipContent>
+            </Tooltip>
           )}
         </div>
       </div>

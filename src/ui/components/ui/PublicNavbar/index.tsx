@@ -7,7 +7,7 @@ import { Button } from "@/src/ui/shadcn/components/ui/button";
 import { useSidebar } from "@/src/ui/shadcn/components/ui/sidebar";
 
 const PublicNavbar = () => {
-  const { setOpen, setOpenMobile } = useSidebar();
+  const { openMobile, open, setOpen, setOpenMobile } = useSidebar();
 
   return (
     <nav className="p-4 md:px-12 flex items-center justify-between">
@@ -21,12 +21,10 @@ const PublicNavbar = () => {
               height={60}
               src={"/res/logo/label-cropped.png"}
               alt="UWC Logo"
+              loading="eager"
             />
           </Link>
         </div>
-
-        {/* Navigation */}
-        <div></div>
       </div>
 
       {/* CTA */}
@@ -44,8 +42,8 @@ const PublicNavbar = () => {
         <Button
           variant={"ghost"}
           onClick={() => {
-            setOpen(true);
-            setOpenMobile(true);
+            setOpen(!open);
+            setOpenMobile(!openMobile);
           }}
         >
           Menu <Menu />

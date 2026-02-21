@@ -25,7 +25,7 @@ const PublicLayout = ({
   }, [showedOnlyForShowcase]);
 
   return (
-    <SidebarProvider>
+    <SidebarProvider defaultOpen={false}>
       <PublicSidebar />
       <main className="flex-1 overflow-hidden">
         {/* Navbar */}

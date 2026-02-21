@@ -3,6 +3,8 @@
 import { ArrowUpRight, Calendar } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
+import { authClient } from "@/src/lib/auth/client";
 import RenderMetadata from "@/src/ui/components/ui/RenderMetadata";
 import StarRating from "@/src/ui/components/ui/StarRating";
 import { Button } from "@/src/ui/shadcn/components/ui/button";
@@ -32,6 +34,9 @@ const Mtd = ({ className, ...props }: React.ComponentProps<"div">) => {
 };
 
 const HeroSection = () => {
+  const { data: session, isPending } = authClient.useSession();
+  const router = useRouter();
+
   return (
     <section
       id="hero"
@@ -53,20 +58,27 @@ const HeroSection = () => {
 
           {/* CTA */}
           <div className="space-x-0 md:space-x-2 grid grid-cols-1 md:flex">
-            <Button size={"lg"}>
-              <ArrowUpRight />
-              Book an Appointment
+            <Button asChild size={"lg"}>
+              <Link href={"/schedule"}>
+                <ArrowUpRight />
+                Book an Appointment
+              </Link>
             </Button>
             <Button
-              asChild
               size={"lg"}
               variant={"outline"}
               className="hidden md:flex"
+              disabled={isPending}
+              onClick={() => {
+                if (!session) {
+                  router.push("/signin");
+                } else {
+                  router.push("/appointments");
+                }
+              }}
             >
-              <Link href={"/schedule"}>
-                <Calendar />
-                {`Doctor's Schedule`}
-              </Link>
+              <Calendar />
+              My Appointments
             </Button>
           </div>
 
