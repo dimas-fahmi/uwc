@@ -4,9 +4,11 @@ import { prettifyError, z } from "zod";
 import { db } from "@/src/db";
 import {
   type BookingInsertType,
+  type BookingSelectType,
   bookingInsertSchema,
   bookingTable,
 } from "@/src/db/schema/booking";
+import type { StandardResponseType } from "@/src/lib/app/app";
 import { auth } from "@/src/lib/auth";
 import { createResponse } from "@/src/lib/utils/createResponse";
 
@@ -17,6 +19,10 @@ export type V1BookingPostRequest = Pick<
   | "preferredDate"
   | "doctorCode"
   | "department"
+>;
+
+export type V1BookingPostResponse = StandardResponseType<
+  BookingSelectType | undefined
 >;
 
 const PATH = "V1_BOOKING_POST" as const;
@@ -78,13 +84,16 @@ export async function v1BookingPost(req: NextRequest) {
   };
 
   try {
-    const response = await db.insert(bookingTable).values(request).returning();
+    const [response] = await db
+      .insert(bookingTable)
+      .values(request)
+      .returning();
 
-    return createResponse(
+    return createResponse<BookingSelectType | undefined>(
       "record_stored",
       "Booking record is created and waiting for approval",
       200,
-      [response],
+      response,
     );
   } catch (error) {
     return createResponse(

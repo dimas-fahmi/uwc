@@ -1,5 +1,6 @@
 "use client";
 import { zodResolver } from "@hookform/resolvers/zod";
+import { useMutation } from "@tanstack/react-query";
 import { formatDate, formatDistance } from "date-fns";
 import { Info } from "lucide-react";
 import { useRouter } from "next/navigation";
@@ -9,6 +10,7 @@ import { SPECIALTY_METADATAS, type Specialty } from "@/src/lib/app";
 import priceData from "@/src/lib/app/data/consultationPrice.json";
 import doctorsData from "@/src/lib/app/data/doctors.json";
 import publicHolidays from "@/src/lib/app/data/publicHolidays.json";
+import { createNewAppointment } from "@/src/lib/query/mutations/createNewAppointment";
 import { newAppointmentSchema } from "@/src/lib/zod/booking";
 import { Button } from "@/src/ui/shadcn/components/ui/button";
 import {
@@ -75,9 +77,18 @@ const NewAppointmentPageIndex = ({
   const month = form.watch("monthOfBirth");
   const year = form.watch("yearOfBirth");
 
+  const { mutate, isPending } = useMutation({
+    mutationFn: createNewAppointment,
+    onSuccess: () => {
+      router.push("/appointments");
+    },
+  });
+
   return (
     <form
       onSubmit={form.handleSubmit((data) => {
+        if (isPending) return;
+
         const request: V1BookingPostRequest = {
           patientBirthday: new Date(
             data.yearOfBirth,
@@ -90,7 +101,7 @@ const NewAppointmentPageIndex = ({
           preferredDate: dateParsed,
         };
 
-        console.log(request);
+        mutate(request);
       })}
       className="space-y-4"
     >
@@ -286,8 +297,8 @@ const NewAppointmentPageIndex = ({
         </p>
       </div>
 
-      <Button type="submit" className="block w-full">
-        Book Appointment
+      <Button type="submit" disabled={isPending} className="block w-full">
+        {isPending ? "Making your appointment" : "Book Appointment"}
       </Button>
     </form>
   );
