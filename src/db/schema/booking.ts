@@ -1,11 +1,12 @@
 import {
+  date,
   index,
-  integer,
   pgTable,
   text,
   timestamp,
   uuid,
 } from "drizzle-orm/pg-core";
+import { createInsertSchema, createSelectSchema } from "drizzle-orm/zod";
 import { bookingStatusEnum, departmentEnum } from "./configs";
 import { userTable } from "./user";
 
@@ -19,11 +20,12 @@ export const bookingTable = pgTable(
       onDelete: "cascade",
     }),
     patientName: text("patient_name").notNull(),
+    patientBirthday: date("patient_birthday").notNull(),
     preferredDate: timestamp("preferred_date").notNull(),
     suggestedDate: timestamp("suggested_date"),
     confirmedDate: timestamp("confirmed_date"),
     department: departmentEnum("department").notNull(),
-    doctorCode: integer("doctor_code").notNull(),
+    doctorCode: text("doctor_code").notNull(),
     preferredFollowUp: text("preferred_follow_up"),
     status: bookingStatusEnum("booking_status").notNull().default("pending"),
     createdAt: timestamp("created_at").notNull().defaultNow(),
@@ -40,3 +42,9 @@ export const bookingTable = pgTable(
     index("idx_public_booking_completedAt").on(t.completedAt),
   ],
 );
+
+export const bookingInsertSchema = createInsertSchema(bookingTable);
+export const bookingSelectSchema = createSelectSchema(bookingTable);
+
+export type BookingInsertType = typeof bookingTable.$inferInsert;
+export type BookingSelectType = typeof bookingTable.$inferSelect;

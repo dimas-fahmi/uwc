@@ -24,7 +24,8 @@
         "noDocumentCookie": "off"
       },
       "a11y": {
-        "noStaticElementInteractions": "off"
+        "noStaticElementInteractions": "off",
+        "noAutofocus": "off"
       },
       "correctness": {
         "useExhaustiveDependencies": "off"

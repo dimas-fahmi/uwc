@@ -73,6 +73,9 @@ const PublicSidebar = () => {
               icon: UserRound,
               text: "Profile",
               className: `${user ? "" : "hidden"}`,
+              onClick: () => {
+                router.push("/profile");
+              },
             },
 
             {

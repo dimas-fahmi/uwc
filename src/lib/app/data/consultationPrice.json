@@ -1,0 +1,36 @@
+{
+  "consultationPrice": {
+    "otolaryngologist": {
+      "basePrice": 1200000,
+      "dayOffMultiplier": 1.4
+    },
+    "general_practitioner": {
+      "basePrice": 800000,
+      "dayOffMultiplier": 1.3
+    },
+    "cardiologist": {
+      "basePrice": 1500000,
+      "dayOffMultiplier": 1.5
+    },
+    "pediatrics": {
+      "basePrice": 1100000,
+      "dayOffMultiplier": 1.3
+    },
+    "dentist": {
+      "basePrice": 950000,
+      "dayOffMultiplier": 1.4
+    },
+    "dermatologist": {
+      "basePrice": 1300000,
+      "dayOffMultiplier": 1.4
+    },
+    "ophthalmologist": {
+      "basePrice": 1250000,
+      "dayOffMultiplier": 1.4
+    },
+    "psychiatrist": {
+      "basePrice": 1400000,
+      "dayOffMultiplier": 1.3
+    }
+  }
+}

@@ -11,7 +11,7 @@ const LayoutGallery = () => {
   const isLastIndex = activeIndex + 1 === images.length;
 
   return (
-    <div className="relative">
+    <div className="relative hidden md:block">
       <Image
         fill
         src={images[activeIndex].path}

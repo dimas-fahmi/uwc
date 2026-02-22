@@ -18,6 +18,7 @@ import {
   type Specialty,
 } from "@/src/lib/app";
 import doctorsData from "@/src/lib/app/data/doctors.json";
+import { authClient } from "@/src/lib/auth/client";
 import { Button } from "@/src/ui/shadcn/components/ui/button";
 import {
   Tooltip,
@@ -87,6 +88,8 @@ const ScheduleContainer = () => {
       setSelectedDate(sdParsed);
     }
   }, [state]);
+
+  const { data: auth, isPending } = authClient.useSession();
 
   return (
     <motion.div
@@ -202,12 +205,20 @@ const ScheduleContainer = () => {
                 <Button
                   variant={"outline"}
                   size={"sm"}
+                  className="disabled:animate-pulse"
                   onClick={() => {
-                    const p = new URLSearchParams({
-                      state: `${selectedSpecialty}-s-${selectedDate.getTime()}`,
-                    });
-                    router.push(`/signin?redTo=/schedule?${p.toString()}`);
+                    if (!auth?.user) {
+                      const p = new URLSearchParams({
+                        state: `${selectedSpecialty}-s-${selectedDate.getTime()}`,
+                      });
+                      router.push(`/signin?redTo=/schedule?${p.toString()}`);
+                    } else {
+                      router.push(
+                        `/appointments/new?department=${selectedSpecialty}&date=${selectedDate.getTime()}&id=${d.code}`,
+                      );
+                    }
                   }}
+                  disabled={isPending}
                 >
                   Book
                 </Button>
