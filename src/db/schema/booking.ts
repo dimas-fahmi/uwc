@@ -16,9 +16,11 @@ export const bookingTable = pgTable(
     id: uuid("id")
       .primaryKey()
       .$defaultFn(() => crypto.randomUUID()),
-    userId: text("user_id").references(() => userTable.id, {
-      onDelete: "cascade",
-    }),
+    userId: text("user_id")
+      .references(() => userTable.id, {
+        onDelete: "cascade",
+      })
+      .notNull(),
     patientName: text("patient_name").notNull(),
     patientBirthday: date("patient_birthday").notNull(),
     preferredDate: timestamp("preferred_date").notNull(),

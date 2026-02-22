@@ -4,7 +4,7 @@ import { formatDate, formatDistance } from "date-fns";
 import { Info } from "lucide-react";
 import { useRouter } from "next/navigation";
 import { Controller, useForm } from "react-hook-form";
-import type { BookingInsertType } from "@/src/db/schema/booking";
+import type { V1BookingPostRequest } from "@/app/api/v1/booking/post";
 import { SPECIALTY_METADATAS, type Specialty } from "@/src/lib/app";
 import priceData from "@/src/lib/app/data/consultationPrice.json";
 import doctorsData from "@/src/lib/app/data/doctors.json";
@@ -78,7 +78,7 @@ const NewAppointmentPageIndex = ({
   return (
     <form
       onSubmit={form.handleSubmit((data) => {
-        const request: BookingInsertType = {
+        const request: V1BookingPostRequest = {
           patientBirthday: new Date(
             data.yearOfBirth,
             data.monthOfBirth - 1,
