@@ -1,4 +1,5 @@
 import { z } from "zod";
+import { DEFAULT_LIMIT } from "../utils/pagination";
 
 export const newAppointmentSchema = z
   .object({
@@ -44,3 +45,20 @@ export const newAppointmentSchema = z
     },
     { error: "Please insert a valid date", path: ["dayOfBirth"] },
   );
+
+export const v1BookingGetRequest = z
+  .object({
+    page: z.coerce.number().optional(),
+    limit: z.coerce.number().optional(),
+    patientName: z.string().optional(),
+    isCompleted: z.stringbool().optional(),
+  })
+  .refine((v) => {
+    if (typeof v.limit === "number" && v.limit > DEFAULT_LIMIT) {
+      return false;
+    }
+
+    return true;
+  });
+
+export type V1BookingGetRequest = z.infer<typeof v1BookingGetRequest>;
