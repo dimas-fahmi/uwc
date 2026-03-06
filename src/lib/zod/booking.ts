@@ -1,4 +1,6 @@
 import { z } from "zod";
+import type { BookingSelectType } from "@/src/db/schema/booking";
+import type { StandardResponseType } from "../app/app";
 import { DEFAULT_LIMIT } from "../utils/pagination";
 
 export const newAppointmentSchema = z
@@ -60,5 +62,7 @@ export const v1BookingGetRequest = z
 
     return true;
   });
+
+export type V1BookingGetResponse = StandardResponseType<BookingSelectType[]>;
 
 export type V1BookingGetRequest = z.infer<typeof v1BookingGetRequest>;

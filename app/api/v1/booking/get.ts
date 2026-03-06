@@ -2,6 +2,7 @@ import { headers } from "next/headers";
 import type { NextRequest } from "next/server";
 import { prettifyError } from "zod";
 import { db } from "@/src/db";
+import type { BookingSelectType } from "@/src/db/schema/booking";
 import { auth } from "@/src/lib/auth";
 import { createResponse } from "@/src/lib/utils/createResponse";
 import { getLimitAndOffset } from "@/src/lib/utils/pagination";
@@ -58,6 +59,7 @@ export async function v1BookingGet(req: NextRequest) {
   try {
     const response = await db.query.bookingTable.findMany({
       where: {
+        userId: user.id,
         patientName:
           typeof params?.patientName === "string"
             ? params.patientName
@@ -70,10 +72,14 @@ export async function v1BookingGet(req: NextRequest) {
               : undefined,
         },
       },
+      orderBy: {
+        preferredDate: "desc",
+      },
       limit,
       offset,
     });
-    return createResponse(
+
+    return createResponse<BookingSelectType[]>(
       "record_fetched",
       "Bookings retrieved",
       200,
