@@ -2,6 +2,7 @@
 
 import { formatDate } from "date-fns";
 import { ArrowRight } from "lucide-react";
+import Link from "next/link";
 import type { BookingSelectType } from "@/src/db/schema/booking";
 import { SPECIALTY_METADATAS } from "@/src/lib/app";
 import doctorsData from "@/src/lib/app/data/doctors.json";
@@ -55,8 +56,10 @@ const AppointmentCard = ({
           <div className="flex items-center gap-4 justify-between w-full">
             <h1 className="font-semibold">{department.name}</h1>
 
-            <Button variant={"outline"} size={"xs"}>
-              <ArrowRight />
+            <Button variant={"outline"} size={"xs"} asChild>
+              <Link href={`/appointments/${appointment.id}`}>
+                <ArrowRight />
+              </Link>
             </Button>
           </div>
         </header>
@@ -66,8 +69,13 @@ const AppointmentCard = ({
           <Table>
             <TableBody>
               <TableRow>
-                <TableCell>Doctor</TableCell>
-                <TableCell>{doctor.name}</TableCell>
+                <TableCell className="min-w-48 max-w-48">Doctor</TableCell>
+                <TableCell className="w-full">{doctor.name}</TableCell>
+              </TableRow>
+
+              <TableRow>
+                <TableCell>Patient</TableCell>
+                <TableCell>{appointment.patientName}</TableCell>
               </TableRow>
 
               <TableRow>

@@ -59,6 +59,7 @@ export async function v1BookingGet(req: NextRequest) {
   try {
     const response = await db.query.bookingTable.findMany({
       where: {
+        id: typeof params?.id === "string" ? params.id : undefined,
         userId: user.id,
         patientName:
           typeof params?.patientName === "string"

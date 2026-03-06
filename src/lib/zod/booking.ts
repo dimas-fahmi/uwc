@@ -50,18 +50,21 @@ export const newAppointmentSchema = z
 
 export const v1BookingGetRequest = z
   .object({
+    id: z.uuid().optional(),
     page: z.coerce.number().optional(),
     limit: z.coerce.number().optional(),
     patientName: z.string().optional(),
     isCompleted: z.stringbool().optional(),
   })
-  .refine((v) => {
-    if (typeof v.limit === "number" && v.limit > DEFAULT_LIMIT) {
-      return false;
-    }
-
-    return true;
-  });
+  .refine(
+    (v) => {
+      if (typeof v.limit === "number" && v.limit > DEFAULT_LIMIT) {
+        return false;
+      }
+      return true;
+    },
+    { path: ["limit"], error: `Limit can't be higher than ${DEFAULT_LIMIT}` },
+  );
 
 export type V1BookingGetResponse = StandardResponseType<BookingSelectType[]>;
 
